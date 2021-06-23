@@ -1,9 +1,0 @@
-
-
-<app-add-grocery (onAddGrocery)="addGrocery($event)"></app-add-grocery>
-
-<app-grocery-card-view 
-*ngFor="let grocery of groceriesList"
-[grocery]="grocery" 
-(onDeleteGrocery)="deleteGrocery(grocery)"
-></app-grocery-card-view>
