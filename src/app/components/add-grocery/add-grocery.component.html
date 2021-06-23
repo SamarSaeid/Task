@@ -1,0 +1,18 @@
+<form *ngIf="showAddItem" class="add-form" (ngSubmit)="onSubmit()">
+
+    <div class="form-control">
+        <label for="name">Name</label>
+        <input type="text" name="text" id="text"  [(ngModel)]="name" placeholder="Add groecery item" required/>
+    </div>
+
+
+    <div class="form-control">
+        <label for="quantity">Quantity</label>
+        <input type="number" name="quantity" id="quantity" [(ngModel)]="quantity" placeholder="Add quantity"  onkeypress="return event.charCode >= 48" min="1"/>
+    </div>
+
+    
+    <app-unit name="units" placeholder="Add unit" [unit]="unitstr"></app-unit>
+
+    <input type="submit" value="Save Grocery" class="btn btn-block"/>
+</form>
